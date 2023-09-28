@@ -31,13 +31,7 @@ Then, choose a problem, solve it and submit your solution.
 `;
 const FAQ=`
 # How to train on ${NAME}?
-Use the `problem set` or `online contests`.
-
-All problems are named as a 4-digit nubmer with leading zeroes, 
-and begin with letter `P`, such as `P0001`.
-
-All contests are named as a 4-digit nubmer with leading zeroes, 
-and begin with letter `C`, such as `C0001`.
+Use the \`problem set\` or \`online contests\`.
 
 Choose a problem, solve it. 
 Then, submit your C++ code. You'll get a verdict:
@@ -55,9 +49,9 @@ Because if your code CEed, judger can't work too.
 # Why my code can't AC (but ACed on other OJs/local) ?
 Your code won't be compiled as a single file.
 
-It will be put in a `namespace`, like this:
+It will be put in a \`namespace\`, like this:
 
-```cpp
+\`\`\`cpp
 #include <bits\stdc++.h>
 //...
 #define ONLINE_JUDGE 1
@@ -76,18 +70,16 @@ int main(){
     //...
     return 0;
 }
-```
+\`\`\`
 
-And we send data with `SOLVER::cin`, judge with `SOLVER::cout`. 
-So, you **must** use `cin`/`cout`. Other ways won't be accepted.
+And we send data with \`SOLVER::cin\`, judge with \`SOLVER::cout\`. 
+So, you **must** use \`cin\`/\`cout\`. Other ways won't be accepted.
 
-# What is `solution set`?
-It's a place where solutions be found.
+# What is \`solution set\`?
+It's a place where solutions can be found.
 
 If you ACed a problem, you can write a solution for that.
-Otherwise, you just can read others'.
-All solution are named as a 4-digit nubmer with leading zeroes, 
-and begin with letter `S`, such as `S0001`.
+Otherwise, you may just read others'.
 
 # Can I publish problems/hold contests?
 Yes, certainly, if you had login.
