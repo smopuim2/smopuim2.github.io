@@ -11,7 +11,7 @@
 //////////////////// Online Judge Info ////////////////////
 
 const NAME=
-/* Name? */"Unnamed Online Judge"/* With quotes */
+/* Name? */"Online Judge"/* With quotes */
 ;
 const SWITCH_RGST=
 /* Allow register? */true/* 'true' or 'false' */
