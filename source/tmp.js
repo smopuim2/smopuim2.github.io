@@ -24,12 +24,75 @@ const GREET=[
 "Hello"
 ];
 const HOME=`
-Your home page.
-Use Markdeep (https://casual-effects.com/markdeep/).
+**Welcome to ${NAME}**
+problem set is the place where you can find large amount of problems. Online Judge System allows you to test your solution for every problem.<br>
+First of all, read carefully FAQ.<br>
+Then, choose a problem, solve it and submit your solution.
 `;
 const FAQ=`
-FAQS.
-Also use Markdeep.
+# How to train on ${NAME}?
+Use the `problem set` or `online contests`.
+
+All problems are named as a 4-digit nubmer with leading zeroes, 
+and begin with letter `P`, such as `P0001`.
+
+All contests are named as a 4-digit nubmer with leading zeroes, 
+and begin with letter `C`, such as `C0001`.
+
+Choose a problem, solve it. 
+Then, submit your C++ code. You'll get a verdict:
+
+|vdc|desc             |
+|---|-----------------|
+|AC |Accepted         |
+|WA |Wrong Answer     |
+|TLE|Time Limit Exceed|
+|RE |Runtime Error    |
+
+Note: if you used other OJs, you'll find JSoj doesn't have CE. 
+Because if your code CEed, judger can't work too.
+
+# Why my code can't AC (but ACed on other OJs/local) ?
+Your code won't be compiled as a single file.
+
+It will be put in a `namespace`, like this:
+
+```cpp
+#include <bits\stdc++.h>
+//...
+#define ONLINE_JUDGE 1
+using namespace std;
+
+namespace SOLVER{
+    stringstream cin,cout;
+    //Your code will be here
+};
+
+//...
+
+int main(){
+    //...
+    SOLVER::main();
+    //...
+    return 0;
+}
+```
+
+And we send data with `SOLVER::cin`, judge with `SOLVER::cout`. 
+So, you **must** use `cin`/`cout`. Other ways won't be accepted.
+
+# What is `solution set`?
+It's a place where solutions be found.
+
+If you ACed a problem, you can write a solution for that.
+Otherwise, you just can read others'.
+All solution are named as a 4-digit nubmer with leading zeroes, 
+and begin with letter `S`, such as `S0001`.
+
+# Can I publish problems/hold contests?
+Yes, certainly, if you had login.
+
+Bad problem/contests will be deleted.
 `;
 
 //////////////////// Don't change anything below ////////////////////
