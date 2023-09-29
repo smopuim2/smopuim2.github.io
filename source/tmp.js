@@ -308,6 +308,9 @@ document.getElementById("1-3/rgst").onclick=function(){
     if(document.getElementById("1-3/pswd").placeholder=="Password..."){
         if(document.getElementById("1-3/name").value.length>0 && document.getElementById("1-3/name").value.length<=10 && document.getElementById("1-3/pswd").value.length<=7){
             JSData.get("@",function(r){
+                if(r.data==null){
+                    JSData.set("@",r.data="");
+                }
                 if(r.data.split(" ").indexOf(document.getElementById("1-3/name").value)>=0){
                     document.getElementById("1-3/ivld").innerText="Name had been used!";
                     document.getElementById("1-3/ivld").style.display="block";
