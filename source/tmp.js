@@ -370,7 +370,7 @@ document.getElementById("2-1").onclick=function(){
     document.getElementById("2-1/all").style.display="block";
     document.getElementById("2-1/list").value="";
     JSData.get("P",function(r){
-        if(r.data==null) JSdata.set("P",r.data=0);
+        if(r.data==null) JSData.set("P",r.data=0);
         for(let i=1;i<=r.data;i++){
             JSData.get("P"+String(i).padStart(4,"0"),function(p){
                 if(p.data!=null){
