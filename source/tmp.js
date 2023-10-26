@@ -582,13 +582,13 @@ bool JUDGER(string s,string t){
 }
 
 int main(){
-    SOLVER::cin<<"${o.itsk}";
+    SOLVER::cin<<R"STRANGEDELIMITER${o.itsk}STRANGEDELIMITER";
     timeb pre,now;
     ftime(&pre);
     SOLVER::main();
     ftime(&now);
     if((now.time*1000+now.millitm)-(pre.time*1000+pre.millitm)>1050) cout<<"TLE";
-    else if(JUDGER("${o.otsk}",SOLVER::cout.str()+"\\n")) cout<<"AC";
+    else if(JUDGER(R"STRANGEDELIMITER${o.otsk}STRANGEDELIMITER",SOLVER::cout.str()+"\\n")) cout<<"AC";
     else cout<<"WA";
     return 0;
 }`;
