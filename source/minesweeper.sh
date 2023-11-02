@@ -97,7 +97,6 @@ load(){
     for col in $(seq $siz)
     do
       arr "grid" $row $col 0
-      arr "show" $row $col 0
     done
   done
   echo "Setting mines"
@@ -164,10 +163,18 @@ dfs(){
 }
 
 main(){
+  echo "Covering grid"
   crow=1
   ccol=1
   cnum=$num
   game_end=0
+  for row in $(seq $siz)
+  do
+    for col in $(seq $siz)
+    do
+      arr "show" $row $col 0
+    done
+  done
   while true
   do
     clear
@@ -284,16 +291,20 @@ main(){
 }
 
 level
+load
 while true
 do
-  load
   main
-  select "What to do?" "Try this level again" "Reselect level" "Exit game"
+  select "What to do?" "Try this board again" "Generate new grid" "Reselect level" "Exit game"
   case "$result" in
     "2")
-      level
+      load
       ;;
     "3")
+      level
+      load
+      ;;
+    "4")
       break
       ;;
   esac
