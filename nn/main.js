@@ -1,8 +1,8 @@
-var n=6,m=5;
+var n=7,m=5;
 var x;
 
 function rand(){
-    return Math.floor((Math.random()-0.5)*200)/100;
+    return Math.floor((Math.random()-0.5)*2e3)/1e3;
 }
 
 function randint(a){
@@ -55,7 +55,7 @@ function feed(){
     }
     let t=[];
     for(let i=0;i<ii.length;i++) t.push(0);
-    let s=1e8;
+    let s=1e10;
     while(s>1e-3){
         for(let i=0;i<ii.length;i++) t[i]=diff(calc(ii[i]),oo[i]);
         let a=randint(x.length);
@@ -68,7 +68,7 @@ function feed(){
         if(less(t2,t)) t=t2;
         else if(Math.random()<1/Math.exp(diff(t,t2)/s)) t=t2;
         else x[a][b][c]=d;
-        s*=0.98;
+        s*=0.99;
         console.log(t,t2);
     }
 }
