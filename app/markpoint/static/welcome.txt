@@ -1,0 +1,7 @@
+# Welcome to MarkPoint!
+
+MarkPoint is a combination of **Markdown** and **Powerpoint**. You can use the PPT-like operations and Markdown for contents.
+
+---
+
+_Currently it's just a demo, but it will become better in the future!!!_
