@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>MarkPoint</title>
+        <link rel='stylesheet' href='/static/popup.css'>
+        <link rel='stylesheet' href='/static/ribbon.css'>
+        <link rel='stylesheet' href='static/style.css'>
+    </head>
+    <body class='theme-dark'>
+        <div class='row-flex flex-center fulfill' id='banner'>
+            <img src='static/loading.svg'>
+            <span id='banner-text'>Loading...</span>
+        </div>
+        <div class='col-flex fulfill' id='root'>
+            <div class='col-flex flex-center' id='menu'>
+                <div class='row-flex'></div>
+                <div>
+                    <div class='under-shadow'></div>
+                    <div class='under'></div>
+                </div>
+            </div>
+            <div class='row-flex flex-center' id='submenu'></div>
+            <div class='row-flex fulfill' id='main'>
+                <div>
+                    <div id='thumbnail'>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div id='viewport' class='fulfill'>
+                    <div id='slide'>
+                        <textarea id='edit'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='row-flex' id='footbar'>
+                <div class='flex-left'></div>
+                <div class='flex-right row-flex'>
+                    <span id='slide-zoom-dec'>-</span>
+                    <span id='slide-zoom'>100</span>
+                    <span>%</span>
+                    <span id='slide-zoom-inc'>+</span>
+                </div>
+            </div>
+        </div>
+        <div id='loader'></div>
+        <script src='/static/jquery-1.12.4.min.js'></script>
+        <script src='/static/md2html.js'></script>
+        <script src='/static/popup.js'></script>
+        <script src='static/markpoint.js'></script>
+        <script src='/static/ribbon.js'></script>
+    </body>
+</html>
+
