@@ -1,0 +1,124 @@
+*{
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-weak-color);
+    color: var(--fg-color);
+    font-family: 'Segoe UI';
+}
+
+#loader{
+    display: none;
+}
+
+.fulfill{
+    width: 100%;
+    height: 100%;
+}
+
+.col-flex{
+    display: flex;
+    flex-direction: column;
+}
+.row-flex{
+    display: flex;
+    flex-direction: row;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-left{
+    margin-right: auto;
+}
+.flex-right{
+    margin-left: auto;
+}
+
+#banner{
+    z-index: 999;
+    background-color: var(--bg-color);
+    position: fixed;
+}
+#banner-text{
+    color: var(--theme-color);
+    margin-left: 10px;
+}
+
+#menu, #submenu{
+    overflow: hidden;
+    white-space: nowrap;
+}
+#menu .option{
+    padding: 7px 9px 5px 9px;
+}
+#menu{
+    position: relative;
+}
+#menu .under, #menu .under-shadow{
+    content: '';
+    display: block;
+    margin-top: -5px;
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    transition: left 0.3s, width 0.3s;
+}
+#menu .under-shadow{
+    background-color: var(--fg-weak-color);
+}
+#menu .under{
+    background-color: var(--theme-color);
+}
+
+#submenu{
+    margin: 5px 20px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px var(--fg-weaker-color);
+}
+#submenu .option{
+    padding: 5px;
+    font-size: small;
+    border-radius: 5px;
+}
+#submenu .option:hover{
+    background-color: var(--bg-weak-color);
+}
+#submenu .option:active{
+    background-color: var(--bg-weaker-color);
+}
+#submenu .bar{
+    width: 1px;
+    height: calc(100% - 10px);
+    margin: 0 2px;
+    background-color: var(--fg-weak-color);
+}
+
+#footbar{
+    background-color: var(--bg-color);
+    box-shadow: 0 0px 3px var(--fg-weaker-color);
+    padding: 2px 10px;
+}
+
+#slide-zoom-inc, #slide-zoom-dec{
+    width: 20px;
+    text-align: center;
+}
+#slide-zoom-inc:hover, #slide-zoom-dec:hover{
+    background-color: var(--bg-weak-color);
+}
+#slide-zoom-inc:active, #slide-zoom-dec:active{
+    background-color: var(--bg-weaker-color);
+}
+#slide-zoom{
+    margin: 0 2px;
+    width: 50px;
+    text-align: center;
+}
