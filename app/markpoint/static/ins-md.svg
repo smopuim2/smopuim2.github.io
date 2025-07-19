@@ -1,0 +1,9 @@
+<svg width='50' height='30' xmlns='http://www.w3.org/2000/svg'>
+    <g transform='translate(5,4)'>
+        <rect x='0.5' y='0.5' width='25' height='22' stroke='grey' rx='1' ry='1' stroke-width='1' fill='transparent'/>
+        <rect x='0.6' y='0.9' width='24.8' height='3' stroke-width='0' fill='grey'/>
+        <text x='3' y='19.5' font-family='Consolas' text-anchor='left' font-size='20' fill='grey'>M</text>
+        <path d='M 18.5 7 L 18.5 16 L 16 16 L 19.5 19.5 L 23 16 L 20.5 16 L 20.5 7 Z' stroke-width='0' fill='grey'/>
+    </g>
+    <path d='M 38 8.5 L 38 13.5 L 33 13.5 L 33 16.5 L 38 16.5 L 38 21.5 L 41 21.5 L 41 16.5 L 46 16.5 L 46 13.5 L 41 13.5 L 41 8.5 Z' stroke-width='0' fill='#45a15a'/>
+</svg>

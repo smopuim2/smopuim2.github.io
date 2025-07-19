@@ -1,0 +1,9 @@
+<svg width='30' height='30' xmlns='http://www.w3.org/2000/svg'>
+    <circle cx='15' cy='15' r='10' stroke='#ffffff22' stroke-width='10' fill='transparent'/>
+    <path d='M 15 5 A 10 10 0 1 0 25 15' stroke='#c43f1d77' stroke-width='10' fill='transparent'>
+        <animateTransform attributeName='transform' type='rotate' from='0 15 15' to='360 15 15' dur='1s' repeatCount='indefinite'/>
+    </path>
+    <path d='M 15 5 A 10 10 0 0 1 25 15' stroke='#c43f1d' stroke-width='10' fill='transparent'>
+        <animateTransform attributeName='transform' type='rotate' from='0 15 15' to='360 15 15' dur='1.5s' repeatCount='indefinite'/>
+    </path>
+</svg>

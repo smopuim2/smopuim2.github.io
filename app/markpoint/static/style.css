@@ -1,0 +1,90 @@
+body.theme-light{
+    --bg-color: white;
+    --fg-color: black;
+    --bg-weak-color: #eeeeee;
+    --bg-weaker-color: #dddddd;
+    --fg-weak-color: #999999;
+    --fg-weaker-color: #777777;
+}
+body.theme-dark{
+    --bg-color: #222222;
+    --fg-color: white;
+    --bg-weak-color: #181818;
+    --bg-weaker-color: black;
+    --fg-weak-color: #666666;
+    --fg-weaker-color: #444444;
+}
+
+#main{
+    overflow: hidden;
+}
+
+.dragging{
+    cursor:move;
+}
+
+#thumbnail{
+    border-right: 2px solid var(--bg-color);
+    margin: 5px 5px 10px 20px;
+    overflow-x: scroll;
+    height: calc(100% - 15px);
+}
+#thumbnail::-webkit-scrollbar{
+    display:none;
+}
+#thumbnail > div{
+    background-color: var(--bg-color);
+    border-radius:3px;
+    width:144px;
+    height:81px;
+    margin: 0 7px 7px;
+}
+#thumbnail > div:hover{
+    box-shadow: 0 0 3px var(--fg-weaker-color);
+}
+#thumbnail > div.active{
+    box-shadow: 0 0 3px var(--theme-color);
+}
+#thumbnail{
+    counter-reset: slide-cnt;
+}
+#thumbnail > div{
+    counter-increment: slide-cnt;
+}
+#thumbnail > div:hover::before{
+    content: counter(slide-cnt);
+    padding: 2px;
+    color: var(--fg-weaker-color);
+}
+#thumbnail > div.active::before{
+    color: var(--theme-color);
+}
+#thumbnail > div{
+    position: relative;
+}
+#thumbnail > div > *{
+    position: absolute;
+}
+
+#viewport{
+    overflow: hidden;
+}
+#slide{
+    background-color: var(--bg-color);
+    width: 720px;
+    height: 405px;
+}
+#slide > *{
+    background-color: transparent;
+    color: var(--fg-color);
+    position: absolute;
+}
+#slide > *:hover, #edit{
+    box-shadow: 0 0 5px var(--bg-weaker-color);
+}
+
+#edit{
+    border: none;
+    outline: none;
+    padding:5px;
+}
