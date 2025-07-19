@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>New Web content</title>
+    </head>
+    <body>
+        <textarea id='t'></textarea>
+        <pre id='p'></pre>
+        <hr>
+        <div id='d'></div>
+        <script src='/static/jquery-1.12.4.min.js'></script>
+        <script src='/static/md2html.js'></script>
+        <script>
+            $('#t').on('input',function(){
+                let x=md2html($('#t').val());
+                $('#d').html(x);
+                $('#p').text(x);
+            });
+        </script>
+    </body>
+</html>
+

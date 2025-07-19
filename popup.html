@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>New Web content</title>
+    </head>
+    <body>
+        <div id='test'><div id='bar' style='background-color:#CCCCCC; display:block;'>=======</div>|12345|</div>
+        <div>other....</div>
+        <div id='test2'><div id='bar2' style='background-color:#CCCCCC; display:block;'>=======</div>|12345|</div>
+        <div>other....</div>
+        <script src='/static/jquery-1.12.4.min.js'></script>
+        <script src='/static/popup.js'></script>
+        <link href='/static/popup.css' rel='stylesheet'></script>
+        <script>
+            $('#bar').on('contextmenu',function(e){
+                if($('#test').css('position')=='fixed') popupjs.put($('#test'),$('#bar'));
+                else popupjs.pop($('#test'),$('#bar'));
+                e.preventDefault();
+            });
+            $('#bar2').on('contextmenu',function(e){
+                if($('#test2').css('position')=='fixed') popupjs.put($('#test2'),$('#bar2'));
+                else popupjs.pop($('#test2'),$('#bar2'));
+                e.preventDefault();
+            });
+        </script>
+    </body>
+</html>
+
