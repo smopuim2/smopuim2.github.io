@@ -2,7 +2,7 @@ const fps=30;
 let gamePause=0;
 const itemdt={
     'Pie':999999,
-    'I. Noddles':90,
+    'I. Noodles':90,
     'L. Hero':40,
     'Steak':60,
     'Poison':-999999
@@ -149,8 +149,12 @@ const keyUpdate=function(){
                 }
             }else if(prevStat[0]=='item'){
                 let it=optList[stat];
-                $('#panel').text('* You ate '+it+'.')
+                let hp2=hp;
                 item.splice(item.indexOf(it),1);
+                hp=Math.max(0,Math.min(maxhp,hp+itemdt[it]));
+                let tx=`* You ate ${it}.\n* You recovered ${hp-hp2} HP!`;
+                if(hp==maxhp) tx+='\n* Your HP is max out.';
+                $('#panel').text(tx)
                 chStat('_end');
             }else if(prevStat[0]=='mercy'){
                 endTurn();
@@ -215,6 +219,7 @@ const gameUpdate=function(){
     }
     $('#b1').width(hp/2);
     $('#b2').width(kr/2);
+    $('#hp2').text(String(hp).padStart(2,'0')+'/'+maxhp);
 };
 
 let prevTs;
